@@ -87,3 +87,9 @@ ENV/
 
 # Rope project settings
 .ropeproject
+
+# Custom setting
+/data
+/model
+/result
+.DS_Store
