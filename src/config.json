@@ -4,9 +4,9 @@
         "train_images_labeled_folder_path" : "data/clf/train_images_labeled",
         "train_images_unlabeled_folder_path" : "data/clf/train_images_unlabeled",
         "test_images_folder_path" : "data/clf/test_images",
-        "category_master" : "data/clf/clf_category_master.tsv",
-        "train_master" : "data/clf/clf_train_master.tsv",
-        "test_master" : "data/clf/clf_test.tsv"
+        "category_master" : "data/clf/category_master.tsv",
+        "train_master" : "data/clf/train_master.tsv",
+        "test_master" : "data/clf/test.tsv"
     },
     "dtc" : {
         "train_image_folder_path" : "data/dtc/train_images",

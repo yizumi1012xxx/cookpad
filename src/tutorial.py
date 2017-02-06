@@ -8,11 +8,11 @@ import pandas as pd
 import numpy as np
 import chainer
 import chainer.functions as F
-from chainer.links import caffe
+# from chainer.links import caffe
 from chainer import optimizers, Variable
 from dataset.clf import ImageData
 from network.Alex import Alex
-from network.fine_tuning import download_model, copy_model
+# from network.fine_tuning import download_model, copy_model
 
 logging.basicConfig(
     format='%(asctime)s [%(levelname)s] %(module)s::%(funcName)s called:(%(lineno)d) - %(message)s',
@@ -111,11 +111,11 @@ def __main():
     # dataset
     train_data = ImageData(
         'data/clf/train_images_labeled',
-        'data/clf/clf_train_master.tsv'
+        'data/clf/train_master.tsv'
     )
     test_data = ImageData(
         'data/clf/test_images',
-        'data/clf/clf_test.tsv'
+        'data/clf/test.tsv'
     )
 
     # train
