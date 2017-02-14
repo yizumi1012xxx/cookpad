@@ -1,6 +1,5 @@
 {
-    "root_path" : "/Users/yuichiro/Documents/workspace/cookpad",
-    "clf" : {
+    "dataset" : {
         "train_images_labeled_folder_path" : "data/clf/train_images_labeled",
         "train_images_unlabeled_folder_path" : "data/clf/train_images_unlabeled",
         "test_images_folder_path" : "data/clf/test_images",
@@ -8,9 +7,190 @@
         "train_master" : "data/clf/train_master.tsv",
         "test_master" : "data/clf/test.tsv"
     },
-    "dtc" : {
-        "train_image_folder_path" : "data/dtc/train_images",
-        "test_image_folder_path" : "data/dtc/test_images",
-        "train_master" : "data/dtc/dtc_train_master.tsv"
+    "project":{
+        "alex_scratch_warp" : {
+            "dataset" : {
+                "use_memory" : 0,
+                "img_size" : 224,
+                "img_type" : "warp"
+            },
+            "model" : {
+                "type" : "AlexNet-cls",
+                "path" : ""
+            },
+            "test_model" : {
+                "type" : "AlexNet-cls",
+                "path" : "result/alexnet_scratch_warp/model_epoch_100"
+            },
+            "optimizer" : {
+                "type" : "MomentumSGD"
+            },
+            "output_path" : "result/alexnet_scratch_warp",
+            "resume_path" : "",
+            "batch_size" : 10,
+            "epoch" : 100,
+            "train" : 0
+        },
+        "alex_scratch_crop" : {
+            "dataset" : {
+                "use_memory" : 0,
+                "img_size" : 224,
+                "img_type" : "crop"
+            },
+            "model" : {
+                "type" : "AlexNet-cls",
+                "path" : ""
+            },
+            "test_model" : {
+                "type" : "AlexNet-cls",
+                "path" : "result/alexnet_scratch_crop/model_epoch_100"
+            },
+            "optimizer" : {
+                "type" : "MomentumSGD"
+            },
+            "output_path" : "result/alexnet_scratch_crop",
+            "resume_path" : "",
+            "batch_size" : 10,
+            "epoch" : 100,
+            "train" : 0
+        },
+        "alexnet_pretrain_warp" : {
+            "dataset" : {
+                "use_memory" : 0,
+                "img_size" : 224,
+                "img_type" : "warp"
+            },
+            "model" : {
+                "type" : "AlexNet",
+                "path" : "model/alexnet/import2.npz"
+            },
+            "test_model" : {
+                "type" : "AlexNet-cls",
+                "path" : "result/alexnet_pretrain_warp/model_epoch_100"
+            },
+            "optimizer" : {
+                "type" : "MomentumSGD"
+            },
+            "output_path" : "result/alexnet_pretrain_warp",
+            "resume_path" : "",
+            "batch_size" : 10,
+            "epoch" : 100,
+            "train" : 0
+        },
+        "alexnet_pretrain_crop" : {
+            "dataset" : {
+                "use_memory" : 0,
+                "img_size" : 224,
+                "img_type" : "crop"
+            },
+            "model" : {
+                "type" : "AlexNet",
+                "path" : "model/alexnet/import2.npz"
+            },
+            "test_model" : {
+                "type" : "AlexNet-cls",
+                "path" : "result/alexnet_pretrain_crop/model_epoch_100"
+            },
+            "optimizer" : {
+                "type" : "MomentumSGD"
+            },
+            "output_path" : "result/alexnet_pretrain_crop",
+            "resume_path" : "",
+            "batch_size" : 10,
+            "epoch" : 100,
+            "train" : 0
+        },
+        "resnet50_pretrain_warp" : {
+            "dataset" : {
+                "use_memory" : 0,
+                "img_size" : 224,
+                "img_type" : "warp"
+            },
+            "model" : {
+                "type" : "ResNet50",
+                "path" : "model/resnet50/import2.npz"
+            },
+            "test_model" : {
+                "type" : "ResNet50-cls",
+                "path" : "result/resnet50_pretrain_warp/model_epoch_100"
+            },
+            "optimizer" : {
+                "type" : "MomentumSGD"
+            },
+            "output_path" : "result/resnet50_pretrain_warp",
+            "resume_path" : "",
+            "batch_size" : 1,
+            "epoch" : 100,
+            "train" : 0
+        },
+        "resnet50_pretrain_warp_adam" : {
+            "dataset" : {
+                "use_memory" : 0,
+                "img_size" : 224,
+                "img_type" : "warp"
+            },
+            "model" : {
+                "type" : "ResNet50",
+                "path" : "model/resnet50/import2.npz"
+            },
+            "test_model" : {
+                "type" : "ResNet50-cls",
+                "path" : "result/resnet50_pretrain_warp_adam/model_epoch_100"
+            },
+            "optimizer" : {
+                "type" : "Adam"
+            },
+            "output_path" : "result/resnet50_pretrain_warp_adam",
+            "resume_path" : "",
+            "batch_size" : 1,
+            "epoch" : 100,
+            "train" : 0
+        },
+        "resnet101_pretrain_warp" : {
+            "dataset" : {
+                "use_memory" : 0,
+                "img_size" : 224,
+                "img_type" : "warp"
+            },
+            "model" : {
+                "type" : "ResNet101",
+                "path" : "model/resnet101/import2.npz"
+            },
+            "test_model" : {
+                "type" : "ResNet101-cls",
+                "path" : "result/resnet101_pretrain_warp/model_epoch_100"
+            },
+            "optimizer" : {
+                "type" : "MomentumSGD"
+            },
+            "output_path" : "result/resnet101_pretrain_warp",
+            "resume_path" : "",
+            "batch_size" : 10,
+            "epoch" : 100,
+            "train" : 0
+        },
+        "resnet152_pretrain_warp" : {
+            "dataset" : {
+                "use_memory" : 1,
+                "img_size" : 224,
+                "img_type" : "warp"
+            },
+            "model" : {
+                "type" : "ResNet152",
+                "path" : "model/resnet152/import2.npz"
+            },
+            "test_model" : {
+                "type" : "ResNet152-cls",
+                "path" : "result/resnet152_pretrain_warp/model_epoch_100"
+            },
+            "optimizer" : {
+                "type" : "MomentumSGD"
+            },
+            "output_path" : "result/resnet152_pretrain_warp",
+            "resume_path" : "",
+            "batch_size" : 10,
+            "epoch" : 100,
+            "train" : 1
+        }
     }
 }

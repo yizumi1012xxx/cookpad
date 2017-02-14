@@ -1,17 +1,17 @@
 # -*- coding: utf-8 -*-
 '''
-Alex.py
+AlexNet.py
 '''
 
 import chainer.functions as F
 import chainer.links as L
 from chainer import Chain
 
-class Alex(Chain):
-    '''Alex'''
+class AlexNet(Chain):
+    '''AlexNet'''
 
     def __init__(self):
-        super(Alex, self).__init__(
+        super(AlexNet, self).__init__(
             conv1=L.Convolution2D(3, 96, 11, stride=4),
             conv2=L.Convolution2D(96, 256, 5, pad=2),
             conv3=L.Convolution2D(256, 384, 3, pad=1),
